@@ -20,11 +20,11 @@ class LinkedList {
 
   addToTail(val) {
     let nn = new LinkedListNode(val);
-    if(this.head) this.head = nn;
+    if(!this.head) this.head = nn;
     else {
       let curr = this.head;
       while (curr.next) {
-        curr.next = nn;
+        curr = curr.next;
       }
       curr.next = nn;
       
